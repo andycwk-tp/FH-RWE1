@@ -41,6 +41,26 @@ input:focus, textarea:focus{
 	width: 100%;
 }
 
-div.form-block label{
+.form-block label{
 	text-indent: -9000px;
 }
+
+.form-block input[type=submit]{
+	height: 50px;
+	font-weight: bolder;
+	color: white;
+
+	background-image: -moz-linear-gradient(bottom, #484D49 14%, #A6ADA8 58%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.14, #484D49),
+		color-stop(0.58, #A6ADA8)
+	);	
+}
+
+	
+
+	
