@@ -1,4 +1,3 @@
-alert('load');
 $().ready(function(){
 	$('form#report-form').on('submit', function(e){    
     e.preventDefault();
