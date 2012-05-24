@@ -4,7 +4,7 @@ $().ready(function(){
 	$('form#report-form').on('submit', function(e){
     alert('send');
     e.preventDefault();
-		$fc.act({
+		$fh.act({
 			act: 'processReport'
 		}, function (){
 			alert(args);
