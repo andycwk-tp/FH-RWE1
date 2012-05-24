@@ -1,0 +1,44 @@
+body {
+	background-color: silver;
+}
+
+section#body-contnet{
+	top: 20px;
+}
+
+.form-block{
+	padding: 5px 0px;
+}
+
+
+/*header*/
+header{
+	font-style: italic;
+	color: gray;
+	text-align: center;
+}
+
+
+
+/* form elements */
+input{
+	height: 2em;
+}
+
+input, textarea{
+	border: solid 1px silver;
+	border-radius: 10px;
+	padding: 2px;
+}
+
+input:focus, textarea:focus{
+	border: dotted 1px black;
+}
+
+.form-block input, .form-block textarea{
+	width: 100%;
+}
+
+div.form-block label{
+	text-indent: -9000px;
+}

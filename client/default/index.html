@@ -1,37 +1,24 @@
+<link rel="stylesheet" href="styles/screen.css" type="text/css" media="screen" />
+
 <header>
 	<h1>Report Graffiti</h1>
 </header>
-<section>
+<section id="body-content">
 	<form>
 		<div class="form-block">
-			<label>
-				First Name
-				<input type="text" name="firstName" autofocus="autofocus" required="required" />
-			</label>
+			<input type="text" name="firstName" autofocus="autofocus" required="required" placeholder="First Name"/>
 		</div>
 		<div class="form-block">
-			<label>
-				Last Name
-				<input type="text" name="lastName" autofocus="autofocus" required="required" />
-			</label>
-		</div>
-		<div class="form=block">
-			<label>
-				Email Address
-				<input type="email" name="emailAddress" required="required" />
-			</label>
+			<input type="text" name="lastName" autofocus="autofocus" required="required" placeholder="Last Name"/>
 		</div>
 		<div class="form-block">
-			<label>
-				Contact Number
-				<input type="number" name="contactNumber" />
-			</label>
+			<input type="email" name="emailAddress" required="required" placeholder="Email address" />
 		</div>
 		<div class="form-block">
-			<label>
-				Describe the Graffiti
-				<textarea name="reportDescription" rows="4" required="required"></textarea>
-			</label>
+			<input type="number" name="contactNumber" placeholder="Contact Number"/>
+		</div>
+		<div class="form-block">
+			<textarea name="reportDescription" rows="4" required="required" placeholder="Describe the graffiti"></textarea>
 		</div>
 	</form>
 </section>
