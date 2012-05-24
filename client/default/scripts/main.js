@@ -1,13 +1,11 @@
 alert('load');
 $().ready(function(){
-  alert('init');
-	$('form#report-form').on('submit', function(e){
-    alert('send');
+	$('form#report-form').on('submit', function(e){    
     e.preventDefault();
 		$fh.act({
 			act: 'processReport'
 		}, function (){
-			alert(args);
+			alert(arguments);      
 		}, function (){
 			alert(args);
 		}
