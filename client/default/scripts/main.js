@@ -16,6 +16,24 @@ $.fn.serializeObject = function()
 };
 
 $().ready(function(){
+	var setLocation = function(){
+		try {
+			$fh.geo({
+				act: 'register'				
+			}, function(result){
+				$('#reportLocationLat').val(result.lat);
+				$('#reportLocationLong').val(result.lon);
+			}, function(message){
+				$('#reportMyLocation').parent().parent().remove();
+				console.log(message);
+			});
+		} catch(err) {
+			console.log('geo-location call not supported - disabling geo-location check');
+			$('#reportMyLocation').parent().parent().remove();
+		}
+	};
+
+	setLocation();
 	$('form#report-form').on('submit', function(e){    
     e.preventDefault();
     try {

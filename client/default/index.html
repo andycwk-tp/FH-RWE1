@@ -8,22 +8,30 @@
 <section id="body-content">
 	<form id="report-form">
 		<div class="form-block">
-			<input type="text" name="firstName" autofocus="autofocus" required="required" placeholder="First Name"/>
+			<input type="text" name="firstName" required="required" placeholder="First Name" class="text"/>
 		</div>
 		<div class="form-block">
-			<input type="text" name="lastName" required="required" placeholder="Last Name"/>
+			<input type="text" name="lastName" required="required" placeholder="Last Name" class="text"/>
 		</div>
 		<div class="form-block">
-			<input type="email" name="emailAddress" required="required" placeholder="Email address" />
+			<input type="email" name="emailAddress" required="required" placeholder="Email address" class="text"/>
 		</div>
 		<div class="form-block">
-			<input type="number" name="contactNumber" placeholder="Contact Number"/>
+			<input type="number" name="contactNumber" placeholder="Contact Number" class="text"/>
 		</div>
 		<div class="form-block">
 			<textarea name="reportDescription" rows="4" required="required" placeholder="Describe the graffiti"></textarea>
 		</div>
 		<div class="form-block">
-			<input type="submit" value="Send my report" name="submit" />
+			<label>
+				<input type="hidden" name="reportLocationLong" id="reportLocationLong" />
+				<input type="hidden" name="reportLocationLat" id="reportLocationLat" />
+				<input type="checkbox" id="reportMyLocation" checked="checked" />
+				inlude my location in the repoort
+			</label>
+		</div>
+		<div class="form-block">
+			<input type="submit" value="Send my report" name="submit" class="button"/>
 		</div>
 	</form>
 </section>

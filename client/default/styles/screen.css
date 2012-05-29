@@ -23,11 +23,11 @@ header{
 
 
 /* form elements */
-input{
+input.text, input.button{
 	height: 2em;
 }
 
-input, textarea{
+input.text, input.button, textarea{
 	border: solid 1px silver;
 	border-radius: 10px;
 	padding: 2px;
@@ -37,7 +37,7 @@ input:focus, textarea:focus{
 	border: dotted 1px black;
 }
 
-.form-block input, .form-block textarea{
+.form-block input.text, input.button, .form-block textarea{
 	width: 100%;
 }
 
