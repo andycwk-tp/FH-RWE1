@@ -5,7 +5,7 @@ function processReport(param){
 			reportLogEntry += index + ':' + param.formData[index] + '  ';
 		}
 		$fh.log(reportLogEntry);
-		return reportLogEntry;
+		return {result: reportLogEntry};
 	} catch(err) {
 		$fh.log(err.message);
 		throw "paramater data is wrong";
