@@ -7,8 +7,8 @@ $().ready(function(){
         req: {data: {nice:'test'}}
       },function(){
         alert('pass');
-      }, function(){
-        alert('fail');
+      }, function(msg, err){
+        alert(msg + ' ' + err.message);
       });
     } catch(err) {
         alert(err.message);
