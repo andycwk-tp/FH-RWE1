@@ -26,7 +26,7 @@ $().ready(function(){
 			req: {formData: form.serializeObject()}
 		},function(result){
 			console.log(result);
-			alert(result);
+			alert(result.result);
 		}, function(msg, err){
 			alert(msg + ' ' + err.message + err.error);
 		});
