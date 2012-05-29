@@ -24,8 +24,9 @@ $().ready(function(){
 		$fh.act({
 			act: 'processReport',
 			req: {formData: form.serializeObject()}
-		},function(){
-			alert('pass');
+		},function(result){
+			console.log(result);
+			alert(result);
 		}, function(msg, err){
 			alert(msg + ' ' + err.message + err.error);
 		});
