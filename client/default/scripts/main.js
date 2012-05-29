@@ -23,6 +23,7 @@ $().ready(function(){
 			}, function(result){
 				$('#reportLocationLat').val(result.lat);
 				$('#reportLocationLong').val(result.lon);
+				alert('location set');
 			}, function(message){
 				//$('#reportMyLocation').parent().parent().remove();
 				alert(message);
