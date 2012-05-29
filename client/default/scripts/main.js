@@ -24,12 +24,12 @@ $().ready(function(){
 				$('#reportLocationLat').val(result.lat);
 				$('#reportLocationLong').val(result.lon);
 			}, function(message){
-				$('#reportMyLocation').parent().parent().remove();
+				//$('#reportMyLocation').parent().parent().remove();
 				alert(message);
 			});
 		} catch(err) {
 			alert('geo-location call not supported - disabling geo-location check ('+ err +')');
-			$('#reportMyLocation').parent().parent().remove();
+			//$('#reportMyLocation').parent().parent().remove();
 		}
 	};
 
