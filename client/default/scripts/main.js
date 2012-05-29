@@ -19,7 +19,7 @@ $().ready(function(){
 	var setLocation = function(){
 		try {
 			$fh.geo({
-				act: 'register'				
+				interval: 0				
 			}, function(result){
 				$('#reportLocationLat').val(result.lat);
 				$('#reportLocationLong').val(result.lon);
