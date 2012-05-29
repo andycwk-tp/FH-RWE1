@@ -1,7 +1,7 @@
 function processReport(param){
   try {
 	for (var index in param.formData){
-		$fh.log(index);
+		$fh.log(index + ':' + param.formData[index]);
 	}
 	
   } catch(err) {
