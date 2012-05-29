@@ -3,7 +3,7 @@ $().ready(function(){
     e.preventDefault();
 		$fh.act({
 			act: 'processReport',
-      req: {data: 'test', mode:'cool'}
+      req: {data: {nifty:'test', mode:'cool'})
 		}, function (){
 			alert(arguments);      
 		}, function (){
