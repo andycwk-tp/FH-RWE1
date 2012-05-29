@@ -25,10 +25,10 @@ $().ready(function(){
 				$('#reportLocationLong').val(result.lon);
 			}, function(message){
 				$('#reportMyLocation').parent().parent().remove();
-				console.log(message);
+				alert(message);
 			});
 		} catch(err) {
-			console.log('geo-location call not supported - disabling geo-location check');
+			alert('geo-location call not supported - disabling geo-location check');
 			$('#reportMyLocation').parent().parent().remove();
 		}
 	};
@@ -43,7 +43,6 @@ $().ready(function(){
 			act: 'processReport',
 			req: {formData: form.serializeObject()}
 		},function(result){
-			console.log(result);
 			alert(result.result);
 		}, function(msg, err){
 			alert(msg + ' ' + err.message + err.error);
