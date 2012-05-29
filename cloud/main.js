@@ -1,7 +1,7 @@
 function processReport(param){
   try {
 	for (var index in param){
-		$fh.log(param[index]);
+		$fh.log(index);
 	}
 	
   } catch(err) {
