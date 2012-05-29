@@ -24,31 +24,33 @@ $().ready(function(){
 				$('#reportLocationLat').val(result.lat);
 				$('#reportLocationLong').val(result.lon);
 			}, function(message){
-				$('#reportMyLocation').parent().parent().remove();
+				//$('#reportMyLocation').parent().parent().remove();
 				alert(message);
 			});
 		} catch(err) {
 			alert('geo-location call not supported - disabling geo-location check ('+ err +')');
-			$('#reportMyLocation').parent().parent().remove();
+			//$('#reportMyLocation').parent().parent().remove();
 		}
 	};
 
 	setLocation();
 	$('form#report-form').on('submit', function(e){    
-    e.preventDefault();
-    try {
-		var form = $('form#report-form');
-		console.log(form.serializeObject());
-		$fh.act({
-			act: 'processReport',
-			req: {formData: form.serializeObject()}
-		},function(result){
-			alert(result.result);
-		}, function(msg, err){
-			alert(msg + ' ' + err.message + err.error);
-		});
-		} catch(err) {
-			alert('catch: ' + err.message);
+		e.preventDefault();
+		setLocation();
+		return;
+		try {
+			var form = $('form#report-form');
+			console.log(form.serializeObject());
+			$fh.act({
+				act: 'processReport',
+				req: {formData: form.serializeObject()}
+			},function(result){
+				alert(result.result);
+			}, function(msg, err){
+				alert(msg + ' ' + err.message + err.error);
+			});
+			} catch(err) {
+				alert('catch: ' + err.message);
 		}
 	});
 });
