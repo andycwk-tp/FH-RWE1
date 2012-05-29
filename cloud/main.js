@@ -1,6 +1,6 @@
 function processReport(param){
   try {
-	  $fh.log(param.data.nice);
+	  $fh.log(param.data);
   } catch(err) {
     $fh.log(err.message);
   }
