@@ -11,7 +11,7 @@ $().ready(function(){
         alert(msg + ' ' + err.message);
       });
     } catch(err) {
-        alert(err.message);
+        alert('catch: ' + err.message);
     }
   });
 });
