@@ -4,7 +4,7 @@ $().ready(function(){
     try {
       $fh.act({
         act: 'processReport',
-        req: {data: 'test'}
+        req: {data: {nice:'test'}}
       },function(){
         alert('pass');
       }, function(){
