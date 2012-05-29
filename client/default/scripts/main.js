@@ -3,7 +3,7 @@ $().ready(function(){
     e.preventDefault();
     try {
 		var form = $('form#report-form');
-		alert(form['firstName']);
+		alert(form.firstName);
 		$fh.act({
 			act: 'processReport',
 			req: {
