@@ -28,7 +28,7 @@ $().ready(function(){
 				alert(message);
 			});
 		} catch(err) {
-			alert('geo-location call not supported - disabling geo-location check');
+			alert('geo-location call not supported - disabling geo-location check ('+ err +')');
 			$('#reportMyLocation').parent().parent().remove();
 		}
 	};
