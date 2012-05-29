@@ -1,3 +1,3 @@
 function processReport(param){
-	$fh.log(param.data);
+	$fh.log(param.data.nifty);
 }
