@@ -1,6 +1,6 @@
 function processReport(param){
   try {
-	for (var index in param){
+	for (var index in param.formData){
 		$fh.log(index);
 	}
 	
