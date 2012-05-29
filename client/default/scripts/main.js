@@ -7,7 +7,7 @@ $().ready(function(){
 		}, function (){
 			alert(arguments);      
 		}, function (){
-			alert(args);
+			alert('ooops')
 		}
 		);
 		e.preventDefault();
