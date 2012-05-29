@@ -8,7 +8,7 @@ $().ready(function(){
       },function(){
         alert('pass');
       }, function(msg, err){
-        alert(msg + ' ' + err.message);
+        alert(msg + ' ' + err.message + err.error);
       });
     } catch(err) {
         alert('catch: ' + err.message);
