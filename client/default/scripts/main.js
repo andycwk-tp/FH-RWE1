@@ -23,21 +23,19 @@ $().ready(function(){
 			}, function(result){
 				$('#reportLocationLat').val(result.lat);
 				$('#reportLocationLong').val(result.lon);
-				alert('location set');
 			}, function(message){
-				//$('#reportMyLocation').parent().parent().remove();
+				$('#reportMyLocation').parent().parent().remove();
 				alert(message);
 			});
 		} catch(err) {
 			alert('geo-location call not supported - disabling geo-location check ('+ err +')');
-			//$('#reportMyLocation').parent().parent().remove();
+			$('#reportMyLocation').parent().parent().remove();
 		}
 	};
 
-	setLocation();
+	setTimeout(function(){setLocation();}, 50);
 	$('form#report-form').on('submit', function(e){    
 		e.preventDefault();
-		setLocation();
 		return;
 		try {
 			var form = $('form#report-form');
