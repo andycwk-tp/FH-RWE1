@@ -1,3 +1,3 @@
-function processReport(){
-	$fh.log(arguments);
+function processReport(param){
+	$fh.log(param.data);
 }
