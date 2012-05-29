@@ -51,4 +51,16 @@ $().ready(function(){
 				alert('catch: ' + err.message);
 		}
 	});
+	
+	$('#reportMyLocation').on('click', function(e){
+		var isChecked = $(this).attr('checked') === 'checked';
+		if (isChecked) {
+			alert('set');
+			setLocation();
+		} else {
+			alert('clear');
+			$('#reportLocationLat').val('');
+			$('#reportLocationLong').val('');
+		}
+	});
 });
