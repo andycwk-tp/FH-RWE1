@@ -8,7 +8,7 @@ $().ready(function(){
 			act: 'processReport',
 			req: {
 				formData: {
-					firstName: form['firstName'];
+					firstName: form['firstName']
 				}}
 		},function(){
 			alert('pass');
