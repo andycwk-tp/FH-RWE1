@@ -1,8 +1,10 @@
 function processReport(param){
   try {
+	var reportLogEntry = 'New report submitted... ';
 	for (var index in param.formData){
-		$fh.log(index + ':' + param.formData[index]);
+		reportLogEntry += index + ':' + param.formData[index]) + '  ';
 	}
+	$fh.log(reportLogEntry);
 	
   } catch(err) {
     $fh.log(err.message);
