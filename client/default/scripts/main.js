@@ -12,7 +12,6 @@ $().ready(function(){
       });
     } catch(err) {
         alert(err.message);
-      }
     }
-	});
-})
+  });
+});
