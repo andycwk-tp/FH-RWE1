@@ -36,7 +36,6 @@ $().ready(function(){
 	setTimeout(function(){setLocation();}, 50);
 	$('form#report-form').on('submit', function(e){    
 		e.preventDefault();
-		return;
 		try {
 			var form = $('form#report-form');
 			console.log(form.serializeObject());
