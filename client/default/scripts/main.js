@@ -7,9 +7,8 @@ $().ready(function(){
 		}, function (){
 			alert(arguments);      
 		}, function (){
-			alert('ooops')
+			alert('ooops');
 		}
 		);
-		e.preventDefault();
 	});
 })
