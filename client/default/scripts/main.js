@@ -67,7 +67,9 @@ $().ready(function(){
 	$('#takePhoto, #useGallery').on('click', function(){
 		var photoFrame = $('#reportPhoto');
 		var oldSource = photoFrame.attr('src');
-		photoFrame.attr('src', 'graphics/progress.gif');
+		setTimeout(function(){
+			photoFrame.attr('src', 'graphics/progress.gif');
+		}, 50);
 		var source = this.id === 'takePhoto'
 			? 'camera'
 			: 'photo';		
