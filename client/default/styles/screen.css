@@ -48,6 +48,11 @@ input:focus, textarea:focus{
 	float: right;
 }
 
+div.img {
+	text-align: center;
+	padding: 10px 0;
+}
+
 .form-block label{
 	text-indent: -9000px;
 }
