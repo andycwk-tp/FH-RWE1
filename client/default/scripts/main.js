@@ -63,4 +63,24 @@ $().ready(function(){
 			$('#reportLocationLong').val('');
 		}
 	});
+	
+	$('#takePhoto, #useGallery').on('click', function(){
+		var source = this.id === 'takePhoto'
+			? 'camera'
+			: 'photo';
+		
+		try {
+			$fh.cam({
+				act: photo,
+				source: source,
+				uri: false
+			}, function(result){
+				alert('photo taken');
+			}, function(msg, err){
+				alert('fault:  msg' + msg);
+			});
+		} catch(err) {
+			alert('cammera not supported - photo options ('+ err +')');			
+		}
+	});
 });

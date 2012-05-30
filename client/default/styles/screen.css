@@ -41,11 +41,18 @@ input:focus, textarea:focus{
 	width: 100%;
 }
 
+.form-block input.half.button{
+	width: 45%;
+}
+.form-block input.second.half.button{
+	float: right;
+}
+
 .form-block label{
 	text-indent: -9000px;
 }
 
-.form-block input[type=submit]{
+.form-block input.button{
 	height: 50px;
 	font-weight: bolder;
 	color: white;
