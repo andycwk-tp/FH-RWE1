@@ -65,10 +65,12 @@ $().ready(function(){
 	});
 	
 	$('#takePhoto, #useGallery').on('click', function(){
+		var photoFrame = $('#reportPhoto');
+		var oldSource = photoFrame.attr('src');
+		photoFrame.attr('src', 'graphics/progress.gif');
 		var source = this.id === 'takePhoto'
 			? 'camera'
-			: 'photo';
-		
+			: 'photo';		
 		try {
 			$fh.cam({
 				act: 'picture',
@@ -78,9 +80,11 @@ $().ready(function(){
 				var photoData = 'data:image/' + result.format + ';base64,' + result.b64;
 				$('#reportPhoto').attr('src', photoData);
 			}, function(msg, err){
+				photoFrame.attr('src', oldSource);
 				alert('fault:  msg' + msg);
 			});
 		} catch(err) {
+			photoFrame.attr('src', oldSource);
 			alert('cammera not supported - photo options ('+ err +')');			
 		}
 	});
