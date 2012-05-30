@@ -67,6 +67,7 @@ $().ready(function(){
 	$('#takePhoto, #useGallery').on('click', function(){
 		var photoFrame = $('#reportPhoto');
 		var oldSource = photoFrame.attr('src');
+		var oldBase64Data = $('#reportPhoto').val();
 		setTimeout(function(){
 			photoFrame.attr('src', 'graphics/progress.gif');
 		}, 50);
@@ -80,13 +81,16 @@ $().ready(function(){
 				uri: false
 			}, function(result){
 				var photoData = 'data:image/' + result.format + ';base64,' + result.b64;
+				$('#reportPhoto').val(result.b64);
 				$('#reportPhoto').attr('src', photoData);
 			}, function(msg, err){
-				photoFrame.attr('src', oldSource);
+				photoFrame.attr('src', oldSource);	
+				$('#reportPhoto').val(oldBase64Data);
 				alert('fault:  msg' + msg);
 			});
 		} catch(err) {
 			photoFrame.attr('src', oldSource);
+			$('#reportPhoto').val(oldBase64Data);
 			alert('cammera not supported - photo options ('+ err +')');			
 		}
 	});
