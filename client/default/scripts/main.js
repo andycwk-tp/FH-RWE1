@@ -71,7 +71,7 @@ $().ready(function(){
 		
 		try {
 			$fh.cam({
-				act: photo,
+				act: 'photo',
 				source: source,
 				uri: false
 			}, function(result){
