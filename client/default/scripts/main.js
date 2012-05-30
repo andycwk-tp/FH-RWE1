@@ -81,7 +81,7 @@ $().ready(function(){
 				uri: false
 			}, function(result){
 				var photoData = 'data:image/' + result.format + ';base64,' + result.b64;
-				$('#reportPhoto').val(result.b64);
+				//$('#reportPhoto').val(result.b64);
 				$('#reportPhoto').attr('src', photoData);
 			}, function(msg, err){
 				photoFrame.attr('src', oldSource);	
