@@ -22,6 +22,16 @@ $().ready(function () {
             }, function (result) {
                 $('#reportLocationLat').val(result.lat);
                 $('#reportLocationLong').val(result.lon);
+                $fh.map({
+                    target: '#map',
+                    lat: result.lat,
+                    lon: result.lon,
+                    zoom: 9
+                }, function (map) {
+                    console.log(map.map);
+                }, function (msg, err) {
+                    console.log(msg);
+                });
             }, function (message) {
                 //$('#reportMyLocation').parent().parent().remove();
                 alert(message);
@@ -31,25 +41,6 @@ $().ready(function () {
             //$('#reportMyLocation').parent().parent().remove();
         }
     };
-
-    try {
-        $fh.geo({
-            interval: 0
-        }, function (res) {
-            $fh.map({
-                target: '#map',
-                lat: res.lat,
-                lon: res.lon,
-                zoom: 9
-            }, function (map) {
-                console.log(map.map);
-            }, function (msg, err) {
-                console.log(msg);
-            });
-        });
-    } catch (err) {
-        alert("google maps not supported (" + err + ")");
-    }
 
     setTimeout(function () { setLocation(); }, 50);
     $('form#report-form').on('submit', function (e) {
