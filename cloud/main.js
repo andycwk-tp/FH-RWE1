@@ -1,4 +1,4 @@
-function processReport(param){
+exports.processReport = function(param){
 	try {
 		var reportLogEntry = 'New report submitted... ';
 		for (var index in param.formData){
