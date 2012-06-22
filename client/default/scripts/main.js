@@ -25,7 +25,7 @@ $().ready(function(){
 				$('#reportLocationLong').val(result.lon);
 			}, function(message){
 				//$('#reportMyLocation').parent().parent().remove();
-				alert(message);
+				//alert(message);
 			});
 		} catch(err) {
 			alert('geo-location call not supported - disabling geo-location check ('+ err +')');
