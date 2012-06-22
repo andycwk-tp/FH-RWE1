@@ -1,3 +1,5 @@
+require('util');
+
 exports.processReport = function(params, callback){
 	try {
 		var reportLogEntry = 'New report submitted... ';
