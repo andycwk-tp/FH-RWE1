@@ -33,7 +33,7 @@ $().ready(function(){
 		}
 	};
 
-	setTimeout(function(){setLocation();}, 50);
+	//setTimeout(function(){setLocation();}, 50);
 	$('form#report-form').on('submit', function(e){    
 		e.preventDefault();
 		try {
